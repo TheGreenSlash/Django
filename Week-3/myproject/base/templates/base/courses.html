@@ -1,0 +1,11 @@
+{%extends 'main.html'%} {% block content %}
+<h1>Available Courses</h1>
+<ul>
+  {% for course in courses %}
+  <li>
+    <b>{{course.course_name}}</b>
+    - {{course.description}}
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}

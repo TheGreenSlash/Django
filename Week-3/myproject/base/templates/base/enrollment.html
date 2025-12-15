@@ -1,0 +1,18 @@
+{%extends 'main.html'%} {% block content %}
+
+<form method="post">
+  {% csrf_token %}
+
+  <input name="student_name" placeholder="Name" />
+  <input name="email" placeholder="Email" />
+
+  <select name="course">
+    {% for course in courses %}
+    <option value="{{ course.id }}">{{ course.course_name }}</option>
+    {% endfor %}
+  </select>
+
+  <button type="submit">Enroll</button>
+</form>
+
+{% endblock %}
