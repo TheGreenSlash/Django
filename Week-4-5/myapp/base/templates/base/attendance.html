@@ -1,0 +1,16 @@
+<h1>All Attendance</h1>
+<p><a href="{% url 'create-attendance' %}">Create Attendance?</a></p>
+<p><a href="{% url 'students' %}">Return to Students</a></p>
+<ul>
+  {% for entry in attendance %}
+  <li>
+    Attendance Status: {{entry.status}}<br />Attendance Date: {{entry.date}}<br />Student
+    Id: {{entry.student}}<br />Subject Id: {{entry.subject}}<br />
+  </li>
+  <p>
+    <a href="{% url 'student-attendance-summary' entry.student %}"
+      >Click here for summary</a
+    >
+  </p>
+  {% endfor %}
+</ul>

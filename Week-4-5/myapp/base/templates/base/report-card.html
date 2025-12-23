@@ -1,0 +1,11 @@
+<h2>Student Report Card</h2>
+
+<p><strong>Student:</strong> {{ report.student }}</p>
+<p><strong>Subjects Graded:</strong> {{ report.subjects_graded }}</p>
+<p><strong>Full Marks:</strong> {{ report.full_marks }}</p>
+<p><strong>Marks Obtained:</strong> {{ report.marks_obtained }}</p>
+<p><strong>Percentage:</strong> {{ report.percentage }}%</p>
+<p><strong>Result:</strong> {{ report.result }}</p>
+<br />
+<p><a href="{% url 'students' %}">Click here </a>to to return to Students</p>
+<p><a href="{% url 'home'  %}">Click here </a>to for Home</p>

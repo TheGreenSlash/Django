@@ -1,0 +1,7 @@
+<h1>These are all the teachers:</h1>
+<ol>
+  {% for teacher in teachers %}
+  <li>{{teacher.name}} | department:{{teacher.department}}</li>
+  {% endfor %}
+</ol>
+<p><a href="{% url 'home' %}">Home page</a></p>

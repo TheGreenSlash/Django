@@ -1,0 +1,14 @@
+<h1>Attendance Summary</h1>
+<br />
+<p>These are the details of {{student}}:</p>
+<ul>
+  <li><h3>Total Classes: {{total_classes}}</h3></li>
+  <li><h3>Present: {{present}}</h3></li>
+  <li><h3>Absent: {{absent}}</h3></li>
+  <li><h3>Attendance(%): {{attendance}}</h3></li>
+</ul>
+
+<p>
+  <a href="{% url 'students' %}">Click here </a>to return to students page<br />
+  <a href="{{request.META.HTTP_REFERER}}">Click here </a> for previous page
+</p>

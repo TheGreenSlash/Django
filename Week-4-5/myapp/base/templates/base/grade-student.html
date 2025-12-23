@@ -1,0 +1,42 @@
+<form method="post">
+  {% csrf_token %}
+
+  <!-- Student -->
+  <div>
+    <label for="student">Student</label>
+    <select name="student" id="student" required>
+      <option value="">Select Student</option>
+      {% for student in students %}
+      <option value="{{ student.id }}">{{ student.name }}</option>
+      {% endfor %}
+    </select>
+  </div>
+  <br />
+  <!-- Assessment -->
+  <div>
+    <label for="assesment">Assessment</label>
+    <select name="assesment" id="assesment" required>
+      <option value="">Select Assessment</option>
+      {% for assesment in assesments %}
+      <option value="{{ assesment.id }}">{{ assesment }}</option>
+      {% endfor %}
+    </select>
+  </div>
+  <br />
+  <!-- Marks Obtained -->
+  <div>
+    <label for="marks_obtained">Marks Obtained</label>
+    <input
+      type="number"
+      name="marks_obtained"
+      id="marks_obtained"
+      min="0"
+      required
+    />
+  </div>
+  <br />
+  <button type="submit">Save Grade</button>
+</form>
+<br />
+<p><a href="{% url 'assesments' %}">View all Assesments</a></p>
+<p><a href="{% url 'home' %}">Return to Home</a></p>

@@ -1,0 +1,27 @@
+<form method="post">
+  {% csrf_token %}
+
+  <label for="status">Status</label><br />
+  <select id="status" name="status" required>
+    <option value="">-- Select Status --</option>
+    <option value="D">Dropped</option>
+    <option value="A">Acive</option></select
+  ><br /><br />
+
+  <label for="student">Student</label><br />
+  <select id="student" name="student" required>
+    {% for s in students %}
+    <option value="{{ s.id }}">{{ s.name }}</option>
+    {% endfor %}</select
+  ><br /><br />
+
+  <label for="subject">Subject</label><br />
+  <select id="subject" name="subject" required>
+    {% for sub in subjects %}
+    <option value="{{ sub.id }}">{{ sub.subject_name }}</option>
+    {% endfor %}</select
+  ><br /><br />
+
+  <button type="submit">Save Attendance</button>
+</form>
+<p><a href="{% url 'enrollments' %}">View Enrollments</a></p>

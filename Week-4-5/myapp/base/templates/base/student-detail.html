@@ -1,0 +1,22 @@
+<h1>Student Detail Page</h1>
+<br />
+{% for student in students %}
+<p>These are the details of <h1>{{student.name}}</h1></p>
+<ul>
+  <li><h3>Roll No: {{student.roll}}</h3></li>
+  <li><h3>Email: {{student.email}}</h3></li>
+  <li><h3>Program: {{student.program}}</h3></li>
+  <li><h3>Status(Active): {{student.active_status}}</h3></li>
+</ul>
+<p>
+  <a href="{% url 'student-attendance-summary' student.id %}">Click here </a>to
+  get attendance summary
+</p>
+<p>
+  <a href="{% url 'student-reportcard' student.id %}">Click here </a>to
+  get Report Card
+</p>
+{% endfor %}
+<p>
+  <a href="{% url 'students' %}">Click here </a> for previous page
+</p>

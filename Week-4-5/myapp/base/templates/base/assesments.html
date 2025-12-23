@@ -1,0 +1,16 @@
+<h1>Assessments</h1>
+<p><a href="{% url 'create-assesment' %}">Create Assesment</a></p>
+<p><a href="{% url 'grade-students' %}">Grade Assesments</a></p>
+<p><a href="{% url 'subjects' %}">Return to Subjects</a></p>
+<ul>
+  {% for entry in assesments %}
+  <li>
+    Assessment Type: {{entry.assesment_type}}<br />Assesment Date:
+    {{entry.date}}<br />Marks(Full): {{entry.max_marks}}<br />Subject Id:
+    {{entry.subject}}<br />
+  </li>
+  <p>
+    ___________________________________________________________________________
+  </p>
+  {% endfor %}
+</ul>

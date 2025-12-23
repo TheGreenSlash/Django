@@ -1,0 +1,12 @@
+<h1>Enrollments</h1>
+<p><a href="{% url 'enroll' %}">Enroll a student?</a></p>
+<p><a href="{% url 'subjects' %}">Return to Subjects</a></p>
+<ul>
+  {% for entry in enrollments %}
+  <li>
+    Enrollment Status: {{entry.status}}<br />Enrollment Date:
+    {{entry.enrollment_date}}<br />Student Id: {{entry.student}}<br />Subject
+    Id: {{entry.subject}}<br />
+  </li>
+  {% endfor %}
+</ul>
