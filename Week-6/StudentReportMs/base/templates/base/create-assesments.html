@@ -1,0 +1,32 @@
+<form method="post">
+  {% csrf_token %}
+
+  <label for="subject">Subject</label><br />
+  <select id="subject" name="subject" required>
+    {% for subject in subjects %}
+    <option value="{{ subject.id }}">
+      {{ subject.subject_name }} ({{ subject.subject_code }})
+    </option>
+    {% endfor %}
+  </select>
+  <br /><br />
+
+  <label for="assesment_type">Assessment Type</label><br />
+  <select id="assesment_type" name="assesment_type" required>
+    <option value="FT">First Terminal</option>
+    <option value="ST">Second Terminal</option>
+    <option value="CBT">Class Based Test</option>
+    <option value="FINAL">Final Term</option>
+  </select>
+  <br /><br />
+
+  <label for="max_marks">Max Marks</label><br />
+  <input type="number" id="max_marks" name="max_marks" required />
+  <br /><br />
+
+  <label for="date">Assessment Date</label><br />
+  <input type="date" id="date" name="date" required />
+  <br /><br />
+
+  <button type="submit">Create Assessment</button>
+</form>

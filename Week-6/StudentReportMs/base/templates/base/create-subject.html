@@ -1,0 +1,38 @@
+<form method="post">
+  {% csrf_token %}
+
+  <label for="subject_code">Subject Code</label><br />
+  <input
+    type="text"
+    id="subject_code"
+    name="subject_code"
+    required
+  /><br /><br />
+
+  <label for="subject_name">Subject Name</label><br />
+  <input
+    type="text"
+    id="subject_name"
+    name="subject_name"
+    required
+  /><br /><br />
+
+  <label for="full_marks">Full Marks</label><br />
+  <input
+    type="number"
+    id="full_marks"
+    name="full_marks"
+    min="0"
+    max="100"
+    required
+  /><br /><br />
+
+  <button type="submit">Create Subject</button>
+</form>
+<p>
+  <a href="{% url 'subjects' %}">Subjects</a>
+</p>
+
+<p>
+  <a href="{% url 'home' %}">Home page</a>
+</p>

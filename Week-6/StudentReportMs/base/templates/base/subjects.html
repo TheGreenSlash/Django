@@ -1,0 +1,20 @@
+<h1>These are all the subjects:</h1>
+
+<ul>
+  {% for subject in subjects %}
+  <li>
+    <strong>{{ subject.subject_code }}</strong> — {{ subject.subject_name }}
+    (Full Marks: {{ subject.full_marks }})
+  </li>
+  {% empty %}
+  <li>No subjects available.</li>
+  {% endfor %}
+</ul>
+
+<p>
+  <a href="{% url 'create-subject' %}">Create Subject?</a>
+</p>
+
+<p>
+  <a href="{% url 'home' %}">Home page</a>
+</p>

@@ -1,0 +1,22 @@
+<h1>All Assessments</h1>
+
+<ul>
+  {% for assessment in assesments %}
+  <li>
+    <strong>{{ assessment.assesment_type }}</strong><br />
+    Subject: {{ assessment.subject }}<br />
+    Max Marks: {{ assessment.max_marks }}<br />
+    Date: {{ assessment.date }}
+  </li>
+  <br />
+  {% empty %}
+  <li>No assessments available.</li>
+  {% endfor %}
+</ul>
+<p>
+  <a href="{% url 'create-assesments' %}">Create Assesments</a>
+</p>
+
+<p>
+  <a href="{% url 'home' %}">Home page</a>
+</p>

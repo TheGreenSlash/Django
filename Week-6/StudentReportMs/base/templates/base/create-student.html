@@ -1,0 +1,51 @@
+<form method="post">
+  {% csrf_token %}
+
+  <label for="student_name">Name</label><br />
+  <input
+    type="text"
+    id="student_name"
+    name="student_name"
+    required
+  /><br /><br />
+
+  <label for="roll_no">Roll</label><br />
+  <input type="number" id="roll_no" name="roll_no" required /><br /><br />
+
+  <label for="date_of_birth">Date of Birth</label><br />
+  <input
+    type="date"
+    id="date_of_birth"
+    name="date_of_birth"
+    required
+  /><br /><br />
+
+  <label for="program">Program</label><br />
+  <input type="text" id="program" name="program" required /><br /><br />
+
+  <label for="section">Section</label><br />
+  <input type="text" id="section" name="section" required /><br /><br />
+
+  <label for="enrollment_year">Enrollment Year</label><br />
+  <input
+    type="date"
+    id="enrollment_year"
+    name="enrollment_year"
+    required
+  /><br /><br />
+
+  <label for="active_status">Active Status</label><br />
+  <select id="active_status" name="active_status">
+    <option value="true">Active</option>
+    <option value="false">Inactive</option>
+  </select>
+  <br /><br />
+
+  <button type="submit">Submit</button>
+</form>
+  <a href="{% url 'students' %}">Students</a>
+</p>
+
+<p>
+  <a href="{% url 'home' %}">Home page</a>
+</p>

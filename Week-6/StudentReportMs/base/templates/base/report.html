@@ -1,0 +1,35 @@
+<h1>Student Report</h1>
+<hr />
+
+<h2>{{ report.student }}</h2>
+
+<ul>
+  <li>
+    <strong>Subjects Graded:</strong>
+    {{ report.subjects_graded }}
+  </li>
+
+  <li>
+    <strong>Full Marks:</strong>
+    {{ report.full_marks }}
+  </li>
+
+  <li>
+    <strong>Marks Obtained:</strong>
+    {{ report.marks_obtained }}
+  </li>
+
+  <li>
+    <strong>Result:</strong>
+    {{ report.result }}
+  </li>
+
+  <li>
+    <strong>Percentage:</strong>
+    {{ report.percentage }}
+  </li>
+</ul>
+
+<p>
+  <a href="{% url 'home' %}">Home page</a>
+</p>

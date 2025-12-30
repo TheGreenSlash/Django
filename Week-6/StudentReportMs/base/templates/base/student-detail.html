@@ -1,0 +1,20 @@
+<h1>Student Detail Page</h1>
+<br />
+
+<h1>{{ student.student_name }}</h1>
+
+<ul>
+  <li><h3>Roll No: {{ student.roll_no }}</h3></li>
+  <li><h3>Date of Birth: {{ student.date_of_birth }}</h3></li>
+  <li><h3>Program: {{ student.program }}</h3></li>
+  <li><h3>Section: {{ student.section }}</h3></li>
+  <li><h3>Enrollment Year: {{ student.enrollment_year }}</h3></li>
+  <li><h3>Status (Active): {{ student.active_status }}</h3></li>
+</ul>
+<p>
+  <a href="{% url 'report' student.id %}">Student Report</a>
+</p>
+
+<p>
+  <a href="{% url 'students' %}">See all students</a>
+</p>
